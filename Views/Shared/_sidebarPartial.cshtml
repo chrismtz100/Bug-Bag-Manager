@@ -1,0 +1,58 @@
+﻿<!-- Sidebar Holder -->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h3>Bug Bag Manager</h3>
+        <strong>BB</strong>
+    </div>
+
+    <ul class="list-unstyled components">
+        <li>
+            <a href=@Url.Action("Index", "Home")>
+                <i class="glyphicon glyphicon-home"></i>
+                Home
+            </a>
+        </li>
+        <li>
+            <a href=@Url.Action("MyBugs", "Home")>
+                <i class="glyphicon glyphicon-briefcase"></i>
+                My Bugs
+            </a>
+
+        </li>
+        <li>
+            <a href=@Url.Action("CreateTicket", "Home")>
+                <i class="glyphicon glyphicon-tag"></i>
+                Create Ticket
+            </a>
+        </li>
+        <li>
+            <a href=@Url.Action("ViewUsers", "Home")>
+                <i class="glyphicon glyphicon-tag"></i>
+                View Users
+            </a>
+        </li>
+        <li>
+            <a href=@Url.Action("ResolvedBugs", "Home")>
+                <i class="glyphicon glyphicon-ok"></i>
+                Resolved Bugs
+            </a>
+        </li>
+        <li>
+            <a href=@Url.Action("FAQs", "Home")>
+                <i class="glyphicon glyphicon-info-sign"></i>
+                FAQs
+            </a>
+        </li>
+        <li>
+            <a href=@Url.Action("Settings", "Home")>
+                <i class="glyphicon glyphicon-wrench"></i>
+                Settings
+            </a>
+        </li>
+    </ul>
+
+    <ul class="list-unstyled CTAs">
+        <li><a href="https://www.github.com/chrismtz100" class="download">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/chrismtz100" class="article">Linkedin</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,119 @@
+﻿@using System.Web.UI.WebControls
+@using Bug_Bag_Manager.Models
+@model IEnumerable<Bug_Bag_Manager.Models.TicketsModel>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <p>View All Tickets</p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Platform)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Os)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Browser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StepsToReproduce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpectedResult)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActualResult)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Priority)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedTo)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Severity)
+            </th>*@
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Url)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Platform)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Os)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Browser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StepsToReproduce)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpectedResult)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActualResult)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Priority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignedTo)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Severity)
+                </td>*@
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
