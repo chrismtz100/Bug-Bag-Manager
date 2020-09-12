@@ -62,8 +62,6 @@ C:\Users\Christian\Desktop\Bug Bag Manager - Copy\bin\EntityFramework.dll
 C:\Users\Christian\Desktop\Bug Bag Manager - Copy\bin\EntityFramework.SqlServer.dll
 C:\Users\Christian\Desktop\Bug Bag Manager - Copy\bin\EntityFramework.xml
 C:\Users\Christian\Desktop\Bug Bag Manager - Copy\bin\EntityFramework.SqlServer.xml
-C:\Users\Christian\Desktop\Bug Bag Manager\obj\Debug\Bug Bag Manager.csprojAssemblyReference.cache
-C:\Users\Christian\Desktop\Bug Bag Manager\obj\Debug\Bug Bag Manager.csproj.CoreCompileInputs.cache
 C:\Users\Christian\Desktop\Bug Bag Manager\bin\Bug Bag Manager.dll.config
 C:\Users\Christian\Desktop\Bug Bag Manager\bin\Bug Bag Manager.dll
 C:\Users\Christian\Desktop\Bug Bag Manager\bin\Bug Bag Manager.pdb
@@ -127,6 +125,8 @@ C:\Users\Christian\Desktop\Bug Bag Manager\bin\System.Web.WebPages.Deployment.xm
 C:\Users\Christian\Desktop\Bug Bag Manager\bin\System.Web.WebPages.Razor.xml
 C:\Users\Christian\Desktop\Bug Bag Manager\bin\Antlr3.Runtime.pdb
 C:\Users\Christian\Desktop\Bug Bag Manager\bin\Dapper.xml
+C:\Users\Christian\Desktop\Bug Bag Manager\obj\Debug\Bug Bag Manager.csprojAssemblyReference.cache
+C:\Users\Christian\Desktop\Bug Bag Manager\obj\Debug\Bug Bag Manager.csproj.CoreCompileInputs.cache
 C:\Users\Christian\Desktop\Bug Bag Manager\obj\Debug\Bug Bag Manager.csproj.CopyComplete
 C:\Users\Christian\Desktop\Bug Bag Manager\obj\Debug\Bug Bag Manager.dll
 C:\Users\Christian\Desktop\Bug Bag Manager\obj\Debug\Bug Bag Manager.pdb

@@ -30,6 +30,8 @@ namespace DataLibrary.BusinessLogic
                 AssignedTo = assignedTo
             };
 
+            Console.WriteLine(DateTime.Now);
+
             string sql = @"insert into dbo.Tickets (UserId, CreatedBy, DateCreated, Title, Description, Url, Platform, Os, Browser, StepsToReproduce, ExpectedResult, ActualResult, Priority, AssignedTo, Severity)
                            values (@UserId, @CreatedBy, @DateCreated, @Title, @Description, @Url, @Platform, @Os, @Browser, @StepsToReproduce, @ExpectedResult, @ActualResult, @Priority, @AssignedTo);";
             return SqlDataAccess.SaveData(sql, data);

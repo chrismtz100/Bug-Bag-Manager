@@ -2,8 +2,8 @@ C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\bin\Debug\DataLibrary.dll
 C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\bin\Debug\DataLibrary.pdb
 C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\bin\Debug\Dapper.dll
 C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\bin\Debug\Dapper.xml
+C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
 C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
 C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.dll
 C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.pdb
-C:\Users\Christian\Desktop\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
