@@ -27,6 +27,7 @@ namespace Bug_Bag_Manager.Controllers
             {
                 int recordsCreated = CreateTicket(model.UserId,
                     model.CreatedBy,
+                    model.DateCreated = DateTime.Now,
                     model.Title,
                     model.Description,
                     model.Url,

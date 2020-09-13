@@ -8,7 +8,7 @@ namespace DataLibrary.BusinessLogic
     public static class 
         TicketsProcessor
     {
-        public static int CreateTicket(int userId, string createdBy, string title, string description,
+        public static int CreateTicket(int userId, string createdBy, DateTime dateCreated, string title, string description,
             string url, string platform, string os, string browser, string stepsToReproduce, 
             string expectedResult, string actualResult, string priority, string assignedTo)
         {
@@ -16,7 +16,7 @@ namespace DataLibrary.BusinessLogic
             {
                 UserId = userId,
                 CreatedBy = createdBy,
-                DateCreated = DateTime.Now,
+                DateCreated = dateCreated,
                 Title = title,
                 Description = description,
                 Url = url,
@@ -31,8 +31,7 @@ namespace DataLibrary.BusinessLogic
             };
 
             Console.WriteLine(DateTime.Now);
-
-            string sql = @"insert into dbo.Tickets (UserId, CreatedBy, DateCreated, Title, Description, Url, Platform, Os, Browser, StepsToReproduce, ExpectedResult, ActualResult, Priority, AssignedTo, Severity)
+            string sql = @"insert into dbo.Tickets (UserId, CreatedBy, DateCreated, Title, Description, Url, Platform, Os, Browser, StepsToReproduce, ExpectedResult, ActualResult, Priority, AssignedTo)
                            values (@UserId, @CreatedBy, @DateCreated, @Title, @Description, @Url, @Platform, @Os, @Browser, @StepsToReproduce, @ExpectedResult, @ActualResult, @Priority, @AssignedTo);";
             return SqlDataAccess.SaveData(sql, data);
         }

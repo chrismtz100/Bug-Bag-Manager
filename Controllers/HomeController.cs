@@ -21,6 +21,7 @@ namespace Bug_Bag_Manager.Controllers
                 {
                     UserId = row.UserId,
                     CreatedBy = row.CreatedBy,
+                    DateCreated = row.DateCreated,
                     Title = row.Title,
                     Description = row.Description,
                     Url = row.Url,

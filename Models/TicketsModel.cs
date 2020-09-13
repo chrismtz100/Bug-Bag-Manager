@@ -13,6 +13,7 @@ namespace Bug_Bag_Manager.Models
         [Display(Name = "Created By")]
         public string CreatedBy { get; set; } //
 
+        [Display(Name = "Date/Time")]
         public DateTime DateCreated { get; set; } //
 
 
