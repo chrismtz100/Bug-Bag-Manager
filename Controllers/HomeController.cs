@@ -12,13 +12,14 @@ namespace Bug_Bag_Manager.Controllers
         {
             ViewBag.Message = "Tickets List";
 
-            var data = LoadTickets();
+            var data = LoadTickets(); 
             List<TicketsModel> tickets = new List<TicketsModel>();
 
             foreach (var row in data)
             {
                 tickets.Add(new TicketsModel()
                 {
+                    Id = row.Id,
                     UserId = row.UserId,
                     CreatedBy = row.CreatedBy,
                     DateCreated = row.DateCreated,

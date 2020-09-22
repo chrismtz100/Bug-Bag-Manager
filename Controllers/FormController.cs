@@ -25,7 +25,8 @@ namespace Bug_Bag_Manager.Controllers
             //If Valid, goes to home page.
             if (ModelState.IsValid) //Double checks if data was valid or not.
             {
-                int recordsCreated = CreateTicket(model.UserId,
+                int recordsCreated = CreateTicket(
+                    model.UserId,
                     model.CreatedBy,
                     model.DateCreated = DateTime.Now,
                     model.Title,

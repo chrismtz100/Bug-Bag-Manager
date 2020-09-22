@@ -16,6 +16,9 @@
     <table class="table">
         <tr>
             <th>
+                @Html.DisplayNameFor(model=> model.Id)
+            </th>
+            <th >
                 @Html.DisplayNameFor(model => model.UserId)
             </th>
             <th>
@@ -27,7 +30,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
-            <th>
+            <th class="col-lg-auto">
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
@@ -57,15 +60,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.AssignedTo)
             </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Severity)
-            </th>*@
             <th></th>
         </tr>
 
         @foreach (var item in Model)
         {
             <tr>
+                <th>
+                    @Html.DisplayFor(modelItem=> item.Id)
+                </th>
                 <td>
                     @Html.DisplayFor(modelItem => item.UserId)
                 </td>

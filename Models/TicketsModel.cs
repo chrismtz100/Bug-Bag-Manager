@@ -6,7 +6,11 @@ namespace Bug_Bag_Manager.Models
     public class TicketsModel
     {
         //BugId +++++++++++++++++++++++++++++++++++++++++++++
-        [Display(Name = "User ID *")]
+        [Display(Name = "ID")]
+        [Range(100000, 999999, ErrorMessage = "You need to enter a valid UserID")]
+        public int Id { get; set; } //
+
+        [Display(Name = "UserID*")]
         [Range(100000, 999999, ErrorMessage = "You need to enter a valid UserID")]
         public int UserId { get; set; } //
 
@@ -19,11 +23,11 @@ namespace Bug_Bag_Manager.Models
 
         //BugOverview ++++++++++++++++++++++++++++++++++++++++
 
-        [Display(Name = "Title *")]
+        [Display(Name = "Title*")]
         [Required(ErrorMessage = "You need to give us a title to this bug")]
         public string Title { get; set; } //
 
-        [Display(Name = "Description *")]
+        [Display(Name = "Description*")]
         [Required(ErrorMessage = "You need to give us a description of the bug.")]
         public string Description { get; set; } //
 
@@ -51,11 +55,11 @@ namespace Bug_Bag_Manager.Models
 
         //BugTracking ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        [Display(Name = "Priority *")]
+        [Display(Name = "Priority*")]
         [Required(ErrorMessage = "You need to give us a the priority level of the bug.")]
         public string Priority { get; set; } //
 
-        [Display(Name = "Assigned To *")]
+        [Display(Name = "Assigned To*")]
 
         [Required(ErrorMessage = "You need to give us who this bug is for.")]
         public string AssignedTo { get; set; } //
