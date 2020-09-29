@@ -8,7 +8,7 @@ namespace Bug_Bag_Manager.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult ViewTickets()
         {
             ViewBag.Message = "Tickets List";
 
@@ -33,11 +33,22 @@ namespace Bug_Bag_Manager.Controllers
                     ExpectedResult = row.ExpectedResult,
                     ActualResult = row.ActualResult,
                     Priority = row.Priority,
-                    AssignedTo = row.AssignedTo
+                    AssignedTo = row.AssignedTo,
+                    TicketStatus = row.TicketStatus
                 });
             }
 
             return View(tickets);
+        }
+
+        public ActionResult TicketDetails()
+        {
+            return View();
+        }
+
+        public ActionResult Index()
+        {
+            return View();
         }
 
         // GET: CreateTicket/Index

@@ -39,8 +39,9 @@ namespace Bug_Bag_Manager.Controllers
                     model.ExpectedResult,
                     model.ActualResult,
                     model.Priority,
-                    model.AssignedTo);
-                return RedirectToAction("Index", "Home");
+                    model.AssignedTo,
+                    model.TicketStatus);
+                return RedirectToAction("ViewTickets", "Home");
             }
 
             //Send data to a Data Library

@@ -262,7 +262,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ViewTickets.cshtml" />
     <Content Include="Views\Shared\_sidebarPartial.cshtml" />
     <Content Include="Views\Shared\_topNavBarPartial.cshtml" />
     <Content Include="Views\Form\FoundBug.cshtml" />
@@ -282,6 +282,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\SignUp.cshtml" />
     <Content Include="Views\Home\ViewUsers.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\TicketDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

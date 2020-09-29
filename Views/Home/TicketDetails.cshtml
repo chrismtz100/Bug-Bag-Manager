@@ -1,0 +1,119 @@
+﻿@using System.Web.UI.WebControls
+@using Bug_Bag_Manager.Models
+@model IEnumerable<Bug_Bag_Manager.Models.TicketsModel>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <h2>View All Tickets</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                Ticket ID
+            </th>
+            <th>
+                User ID
+            </th>
+            <th>
+                Submitter
+            </th>
+            <th>
+                Ticket Title
+            </th>
+            <th>
+                Ticked Description
+            </th>
+
+            <th>
+                Assigned Developer
+            </th>
+            <th>
+                Priority
+            </th>
+            <th>
+                URL
+            </th>
+            <th>
+                Platform
+            </th>
+            <th>
+                Os
+            </th>
+            <th>
+                Browser
+            </th>
+            <th>
+                Steps to Reproduce
+            </th>
+            <th>
+                Expected Results
+            </th>
+            <th>
+                Actual Results
+            </th>
+            <th>
+                Date Created
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem=> item.Id)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Url)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Platform)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Os)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Browser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StepsToReproduce)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpectedResult)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActualResult)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Priority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignedTo)
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

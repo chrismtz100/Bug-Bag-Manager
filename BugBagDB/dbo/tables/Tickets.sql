@@ -13,6 +13,7 @@
 	[StepsToReproduce] NVARCHAR(MAX) NULL, 
 	[ExpectedResult] NVARCHAR(MAX) NULL, 
 	[ActualResult] NVARCHAR(MAX) NULL, 
-	[Priority] NVARCHAR(50) NOT NULL, 
-	[AssignedTo] NVARCHAR(MAX) NOT NULL,
+	[Priority] NVARCHAR(50) NULL, 
+	[AssignedTo] NVARCHAR(MAX) NULL, 
+	[TicketStatus] BIT NULL,
 )

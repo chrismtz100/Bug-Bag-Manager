@@ -1,7 +1,8 @@
 ﻿@using System.Web.UI.WebControls
 @using Bug_Bag_Manager.Models
-@model IEnumerable<Bug_Bag_Manager.Models.TicketsModel>
-
+@{
+    ViewBag.Title = "Dashboard";
+}
 
 <!DOCTYPE html>
 <html>
@@ -11,109 +12,77 @@
 </head>
 
 <body>
-    <h2>View All Tickets</h2>
+    <h2>Dashboard</h2>
 
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model=> model.Id)
-            </th>
-            <th >
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateCreated)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th class="col-lg-auto">
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Url)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Platform)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Os)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Browser)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StepsToReproduce)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExpectedResult)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ActualResult)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Priority)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AssignedTo)
-            </th>
-            <th></th>
-        </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <th>
-                    @Html.DisplayFor(modelItem=> item.Id)
-                </th>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedBy)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateCreated)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Url)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Platform)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Os)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Browser)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StepsToReproduce)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpectedResult)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ActualResult)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Priority)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AssignedTo)
-                </td>
-            </tr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Pie Series</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="piechart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Unresolved Tickets</h3>
+                    </div>
+                    <div id="num-unresolved-tickets" class="panel-body">
+                        <h2 class="text-center">
+                            <?php>
+                                $SELECT COUNT(ID) AS UserId FROM Tickets;
+                            </?php>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Resolved Tickets</h3>
+                    </div>
+                    <div id="num-resolved-tickets" class="panel-body">
+                        <h2 class="text-center">4</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['None', 8],
+                ['Low', 2],
+                ['Medium', 4],
+                ['High', 2]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options = { 'title': 'My Average Day', 'width': 400, 'height': 300 };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
         }
 
-    </table>
+        function displayTicketsNum() {
+
+        }
+    </script>
 </body>
 </html>
+

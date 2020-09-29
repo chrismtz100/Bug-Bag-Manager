@@ -19,6 +19,7 @@ namespace DataLibrary.Models
         public string ActualResult { get; set; }
         public string Priority { get; set; }
         public string AssignedTo { get; set; }
+        public int TicketStatus { get; set; }
 
     }
 }

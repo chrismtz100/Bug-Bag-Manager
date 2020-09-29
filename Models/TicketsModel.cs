@@ -7,27 +7,29 @@ namespace Bug_Bag_Manager.Models
     {
         //BugId +++++++++++++++++++++++++++++++++++++++++++++
         [Display(Name = "ID")]
-        [Range(100000, 999999, ErrorMessage = "You need to enter a valid UserID")]
         public int Id { get; set; } //
 
-        [Display(Name = "UserID*")]
-        [Range(100000, 999999, ErrorMessage = "You need to enter a valid UserID")]
+        [Display(Name = "User ID*")]
+        [Required (ErrorMessage = "You need to submit your User Id")]
+        [Range(100000, 999999, ErrorMessage = "You need to enter a valid UserID: Range from 100000-999999")]
         public int UserId { get; set; } //
 
         [Display(Name = "Created By")]
         public string CreatedBy { get; set; } //
 
-        [Display(Name = "Date/Time")]
+        [Display(Name = "Created")]
         public DateTime DateCreated { get; set; } //
+        [Display(Name = "Ticket Status")]
+        public int TicketStatus { get; set; }
 
 
         //BugOverview ++++++++++++++++++++++++++++++++++++++++
 
-        [Display(Name = "Title*")]
+        [Display(Name = "Ticket Title*")]
         [Required(ErrorMessage = "You need to give us a title to this bug")]
         public string Title { get; set; } //
 
-        [Display(Name = "Description*")]
+        [Display(Name = "Ticket Description*")]
         [Required(ErrorMessage = "You need to give us a description of the bug.")]
         public string Description { get; set; } //
 
@@ -59,7 +61,7 @@ namespace Bug_Bag_Manager.Models
         [Required(ErrorMessage = "You need to give us a the priority level of the bug.")]
         public string Priority { get; set; } //
 
-        [Display(Name = "Assigned To*")]
+        [Display(Name = "Assigned Developer*")]
 
         [Required(ErrorMessage = "You need to give us who this bug is for.")]
         public string AssignedTo { get; set; } //
