@@ -10,7 +10,7 @@ namespace Bug_Bag_Manager.Models
         public int Id { get; set; } //
 
         [Display(Name = "User ID*")]
-        [Required (ErrorMessage = "You need to submit your User Id")]
+        [Required(ErrorMessage = "You need to submit your User Id")]
         [Range(100000, 999999, ErrorMessage = "You need to enter a valid UserID: Range from 100000-999999")]
         public int UserId { get; set; } //
 
@@ -20,7 +20,7 @@ namespace Bug_Bag_Manager.Models
         [Display(Name = "Created")]
         public DateTime DateCreated { get; set; } //
         [Display(Name = "Ticket Status")]
-        public int TicketStatus { get; set; }
+        public int? TicketStatus { get; set; } //
 
 
         //BugOverview ++++++++++++++++++++++++++++++++++++++++
@@ -36,8 +36,8 @@ namespace Bug_Bag_Manager.Models
         [Display(Name = "Url")]
         public string Url { get; set; } //
 
-        [Display(Name = "Platform")]
-        public string Platform { get; set; } //
+        [Display(Name = "Type")]
+        public string Type { get; set; } //
 
         [Display(Name = "OS")]
         public string Os { get; set; } //

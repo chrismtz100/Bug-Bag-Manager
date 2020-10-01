@@ -11,7 +11,7 @@ namespace DataLibrary.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string Url { get; set; }
-        public string Platform { get; set; }
+        public string Type { get; set; }
         public string Os { get; set; }
         public string Browser { get; set; }
         public string StepsToReproduce { get; set; }
@@ -19,7 +19,7 @@ namespace DataLibrary.Models
         public string ActualResult { get; set; }
         public string Priority { get; set; }
         public string AssignedTo { get; set; }
-        public int TicketStatus { get; set; }
+        public int? TicketStatus { get; set; }
 
     }
 }

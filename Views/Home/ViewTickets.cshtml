@@ -13,10 +13,11 @@
 <body>
     <h2>View All Tickets</h2>
 
+
     <table id="ticketsTable" class="table">
         <tr>
             <th>
-                Ticket #
+                Ticket ID
             </th>
             <th>
                 Created By
@@ -40,83 +41,77 @@
             <th>
                 Status
             </th>
-
-            @*<th>
-                    URL
-                </th>
-                <th>
-                    Platform
-                </th>
-                <th>
-                    Os
-                </th>
-                <th>
-                    Browser
-                </th>
-                <th>
-                    Steps to Reproduce
-                </th>
-                <th>
-                    Expected Results
-                </th>
-                <th>
-                    Actual Results
-                </th>*@
         </tr>
 
-        @foreach (var item in Model)
-        {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedBy) <br /> <h6>ID:@Html.DisplayFor(modelItem => item.UserId)</h6>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AssignedTo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Priority)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateCreated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TicketStatus)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "TicketDetails", "Home")
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Url)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Platform)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Os)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Browser)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StepsToReproduce)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ExpectedResult)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ActualResult)
-        </td>*@
-    </tr>
+        @{
+            int count = 0;
+            foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>
+                        <a href=@Url.Action("TicketDetails", "Home")>@count</a>
+
+                        @*@Html.ActionLink("#" + @Html.DisplayFor(modelItem => item.Id), "TicketDetails", "Home")*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedBy) <br /> <h6>ID:@Html.DisplayFor(modelItem => item.UserId)</h6>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AssignedTo)
+                    </td>
+                    <td>
+                        @{
+                            if ((String)item.Priority == "HIGH" || (String)item.Priority == "High" || (String)item.Priority == "high")
+                            {
+                                //show High style="background-color:Tomato"
+                                <h5 style="background-color:red; text-align:center; color:white">High</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                            else if ((String)item.Priority == "MEDIUM" || (String)item.Priority == "Medium" || (String)item.Priority == "medium")
+                            {
+                                //show Medium style="background-color:Orange"
+                                <h5 style="background-color:orange; text-align:center; color:white">Medium</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                            else if ((String)item.Priority == "LOW" || (String)item.Priority == "Low" || (String)item.Priority == "low")
+                            {
+                                //show Low style="background-color: DodgerBlue"
+                                <h5 style="background-color:dodgerblue; text-align:center; color:white">Low</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                            else // if none
+                            {   //show style="background-color:Tomato"
+                                <h5 style="background-color:none; text-align:center">None</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </td>
+                    <td>
+                        @{
+                            if ((int?)item.TicketStatus == 1 && (int?)item.TicketStatus != null)
+                            {
+                                <span style="background-color:green; text-align:center; color:white">Resolved</span>
+                            }
+                            else if ((int?)item.TicketStatus == 0 || (int?)item.TicketStatus == null)
+                            {
+                                <span style="background-color:none; text-align:center; color:none">Unresolved</span>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
         }
     </table>
+    <button onclick="window.print()">Print All Tickets</button>
 </body>
 </html>

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DataLibrary.BusinessLogic
 {
-    public static class 
+    public static class
         UsersProcessor
     {
         public static int CreateUser(int userId, string firstName,

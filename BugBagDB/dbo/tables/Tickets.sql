@@ -7,7 +7,7 @@
 	[Title] NVARCHAR(MAX) NOT NULL, 
 	[Description] NVARCHAR(MAX) NOT NULL, 
 	[Url] NVARCHAR(MAX) NULL, 
-	[Platform] NVARCHAR(MAX) NULL, 
+	[Type] NVARCHAR(MAX) NULL, 
 	[Os] NVARCHAR(MAX) NULL, 
 	[Browser] NVARCHAR(MAX) NULL, 
 	[StepsToReproduce] NVARCHAR(MAX) NULL, 

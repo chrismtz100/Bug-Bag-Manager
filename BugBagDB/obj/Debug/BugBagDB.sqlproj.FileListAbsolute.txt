@@ -7,9 +7,6 @@ C:\Users\Christian\Desktop\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.sqlprojAs
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\bin\Debug\BugBagDB.dacpac
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\bin\Debug\BugBagDB.dll
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\bin\Debug\BugBagDB.pdb
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\Model.xml
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\refactor.xml
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\postdeploy.sql
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\predeploy.sql
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.dll
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.pdb
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.sqlprojAssemblyReference.cache

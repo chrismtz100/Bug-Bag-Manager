@@ -17,7 +17,7 @@ namespace Bug_Bag_Manager.Controllers
             return View();
         }
 
-        
+
         [HttpPost] //When SignUp function asks for a GET request from SignUp form, a POST request is called
         [ValidateAntiForgeryToken]
         public ActionResult FoundBug(Models.TicketsModel model)
@@ -32,8 +32,8 @@ namespace Bug_Bag_Manager.Controllers
                     model.Title,
                     model.Description,
                     model.Url,
-                    model.Platform,
-                    model.Os, 
+                    model.Type,
+                    model.Os,
                     model.Browser,
                     model.StepsToReproduce,
                     model.ExpectedResult,
@@ -48,6 +48,6 @@ namespace Bug_Bag_Manager.Controllers
 
             return View();
         }
-        
+
     }
 }
