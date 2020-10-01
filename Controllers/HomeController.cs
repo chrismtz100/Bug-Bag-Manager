@@ -9,6 +9,36 @@ namespace Bug_Bag_Manager.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult TicketDetails()
+        {
+            //ViewBag.Message = "Tickets List";
+
+            var data = LoadTickets();
+            int thirdRow = data.Count - 1;
+            List<TicketsModel> tickets = new List<TicketsModel>();
+            tickets.Add(new TicketsModel()
+            {
+                Id = data[thirdRow].Id,
+                UserId = data[thirdRow].UserId,
+                CreatedBy = data[thirdRow].CreatedBy,
+                DateCreated = data[thirdRow].DateCreated,
+                Title = data[thirdRow].Title,
+                Description = data[thirdRow].Description,
+                Url = data[thirdRow].Url,
+                Type = data[thirdRow].Type,
+                Os = data[thirdRow].Os,
+                Browser = data[thirdRow].Browser,
+                StepsToReproduce = data[thirdRow].StepsToReproduce,
+                ExpectedResult = data[thirdRow].ExpectedResult,
+                ActualResult = data[thirdRow].ActualResult,
+                Priority = data[thirdRow].Priority,
+                AssignedTo = data[thirdRow].AssignedTo,
+                TicketStatus = data[thirdRow].TicketStatus
+            });
+
+            return View(tickets);
+        }
+
         public ActionResult ViewTickets()
         {
             ViewBag.Message = "Tickets List";
@@ -38,36 +68,6 @@ namespace Bug_Bag_Manager.Controllers
                     TicketStatus = row.TicketStatus
                 });
             }
-
-            return View(tickets);
-        }
-
-        public ActionResult TicketDetails()
-        {
-            //ViewBag.Message = "Tickets List";
-
-            var data = LoadTickets();
-            int thirdRow = data.Count - 1;
-            List<TicketsModel> tickets = new List<TicketsModel>();
-            tickets.Add(new TicketsModel()
-            {
-                Id = data[thirdRow].Id,
-                UserId = data[thirdRow].UserId,
-                CreatedBy = data[thirdRow].CreatedBy,
-                DateCreated = data[thirdRow].DateCreated,
-                Title = data[thirdRow].Title,
-                Description = data[thirdRow].Description,
-                Url = data[thirdRow].Url,
-                Type = data[thirdRow].Type,
-                Os = data[thirdRow].Os,
-                Browser = data[thirdRow].Browser,
-                StepsToReproduce = data[thirdRow].StepsToReproduce,
-                ExpectedResult = data[thirdRow].ExpectedResult,
-                ActualResult = data[thirdRow].ActualResult,
-                Priority = data[thirdRow].Priority,
-                AssignedTo = data[thirdRow].AssignedTo,
-                TicketStatus = data[thirdRow].TicketStatus
-            });
 
             return View(tickets);
         }
@@ -240,29 +240,6 @@ namespace Bug_Bag_Manager.Controllers
             return View(users);
         }
 
-        public ActionResult SignUp()
-        {
-            ViewBag.Message = "User Sign Up";
-            return View();
-        }
 
-        [HttpPost] //When SignUp function asks for a GET request from SignUp form, a POST request is called
-        [ValidateAntiForgeryToken]
-        public ActionResult SignUp(UsersModel model)
-        {
-            //If Valid, goes to home page.
-            if (ModelState.IsValid) //Double checks if data was valid or not.
-            {
-                int recordsCreated = CreateUser(model.UserId,
-                    model.FirstName,
-                    model.LastName,
-                    model.EmailAddress);
-                return RedirectToAction("Index");
-            }
-
-            //Send data to a Data Library
-
-            return View();
-        }
     }
 }

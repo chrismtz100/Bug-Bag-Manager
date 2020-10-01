@@ -14,8 +14,8 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href=@Url.Action("_LoginPartial", "Home")>Login</a></li>
-                <li><a href=@Url.Action("SignUp", "Home")>Sign Up</a></li>
+                <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                <li>@Html.ActionLink("Sign Up", "SignUp", "Account")</li>
             </ul>
         </div>
     </div>
