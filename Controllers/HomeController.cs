@@ -1,9 +1,9 @@
 ﻿using Bug_Bag_Manager.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using static DataLibrary.BusinessLogic.UsersProcessor;
 using static DataLibrary.BusinessLogic.TicketsProcessor;
-using System;
+using static DataLibrary.BusinessLogic.UsersProcessor;
 
 namespace Bug_Bag_Manager.Controllers
 {
@@ -15,37 +15,39 @@ namespace Bug_Bag_Manager.Controllers
 
             var data = LoadTickets();
             int thirdRow = data.Count - 1;
-            List<TicketsModel> tickets = new List<TicketsModel>();
-            tickets.Add(new TicketsModel()
+            List<TicketsModel> tickets = new List<TicketsModel>
             {
-                Id = data[thirdRow].Id,
-                UserId = data[thirdRow].UserId,
-                CreatedBy = data[thirdRow].CreatedBy,
-                DateCreated = data[thirdRow].DateCreated,
-                Title = data[thirdRow].Title,
-                Description = data[thirdRow].Description,
-                Url = data[thirdRow].Url,
-                Type = data[thirdRow].Type,
-                Os = data[thirdRow].Os,
-                Browser = data[thirdRow].Browser,
-                StepsToReproduce = data[thirdRow].StepsToReproduce,
-                ExpectedResult = data[thirdRow].ExpectedResult,
-                ActualResult = data[thirdRow].ActualResult,
-                Priority = data[thirdRow].Priority,
-                AssignedTo = data[thirdRow].AssignedTo,
-                TicketStatus = data[thirdRow].TicketStatus
-            });
+                new TicketsModel()
+                {
+                    Id = data[thirdRow].Id,
+                    UserId = data[thirdRow].UserId,
+                    CreatedBy = data[thirdRow].CreatedBy,
+                    DateCreated = data[thirdRow].DateCreated,
+                    Title = data[thirdRow].Title,
+                    Description = data[thirdRow].Description,
+                    Url = data[thirdRow].Url,
+                    Type = data[thirdRow].Type,
+                    Os = data[thirdRow].Os,
+                    Browser = data[thirdRow].Browser,
+                    StepsToReproduce = data[thirdRow].StepsToReproduce,
+                    ExpectedResult = data[thirdRow].ExpectedResult,
+                    ActualResult = data[thirdRow].ActualResult,
+                    Priority = data[thirdRow].Priority,
+                    AssignedTo = data[thirdRow].AssignedTo,
+                    TicketStatus = data[thirdRow].TicketStatus
+                }
+            };
 
             return View(tickets);
         }
 
         public ActionResult ViewTickets()
         {
-            ViewBag.Message = "Tickets List";
 
             var data = LoadTickets();
             List<TicketsModel> tickets = new List<TicketsModel>();
-
+            int totalTickets = data.Count;
+            ViewBag.NumOfTickets = totalTickets;
             foreach (var row in data)
             {
                 tickets.Add(new TicketsModel()
@@ -74,6 +76,7 @@ namespace Bug_Bag_Manager.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Title = "Dashboard";
             var data = LoadTickets();
             int numberOfTickets = data.Count;
             int numberOfResolvedTickets = 0;
@@ -116,6 +119,7 @@ namespace Bug_Bag_Manager.Controllers
                 }
                 count++;
             }
+
             //Ticket Nums
             ViewBag.NumOfTickets = numberOfTickets;
             //Tickets Resolved/Unresolved
@@ -126,7 +130,6 @@ namespace Bug_Bag_Manager.Controllers
             ViewBag.NumOfPriorityMedium = priorityMedium;
             ViewBag.NumOfPriorityHigh = priorityHigh;
             ViewBag.NumOfPriorityNone = priorityNone;
-
 
             return View();
         }

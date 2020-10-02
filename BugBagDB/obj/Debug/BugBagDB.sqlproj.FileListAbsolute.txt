@@ -4,9 +4,3 @@ C:\Users\Christian\Desktop\Bug Bag Manager\BugBagDB\bin\Debug\BugBagDB.pdb
 C:\Users\Christian\Desktop\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.dll
 C:\Users\Christian\Desktop\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.pdb
 C:\Users\Christian\Desktop\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.sqlprojAssemblyReference.cache
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\bin\Debug\BugBagDB.dacpac
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\bin\Debug\BugBagDB.dll
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\bin\Debug\BugBagDB.pdb
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.dll
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.pdb
-C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\BugBagDB\obj\Debug\BugBagDB.sqlprojAssemblyReference.cache

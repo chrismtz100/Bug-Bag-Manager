@@ -1,9 +1,6 @@
 ﻿using Bug_Bag_Manager.Models;
-using System.Collections.Generic;
 using System.Web.Mvc;
 using static DataLibrary.BusinessLogic.UsersProcessor;
-using static DataLibrary.BusinessLogic.TicketsProcessor;
-using System;
 
 namespace Bug_Bag_Manager.Controllers
 {
@@ -18,12 +15,12 @@ namespace Bug_Bag_Manager.Controllers
         {
             return View();
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginModel model)
-        {
-            return View();
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Login(LoginModel model)
+        //{
+        //    return View();
+        //}
 
         public ActionResult SignUp()
         {
@@ -37,7 +34,7 @@ namespace Bug_Bag_Manager.Controllers
             //If Valid, goes to home page.
             if (ModelState.IsValid) //Double checks if data was valid or not.
             {
-                int recordsCreated = CreateUser(model.UserId,
+                CreateUser(model.UserId,
                     model.FirstName,
                     model.LastName,
                     model.EmailAddress);

@@ -10,22 +10,24 @@ namespace Bug_Bag_Manager.Controllers
 {
     public class FormController : Controller
     {
-        // GET: BugReport/Index
+        // GET: 
+        //BugReport/Form/FoundBug
         public ActionResult FoundBug()
         {
             ViewBag.Message = "User Sign Up";
             return View();
         }
 
-
-        [HttpPost] //When SignUp function asks for a GET request from SignUp form, a POST request is called
+        //POST: 
+        //When SignUp function asks for a GET request from SignUp form, a POST request is called
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult FoundBug(Models.TicketsModel model)
         {
             //If Valid, goes to home page.
             if (ModelState.IsValid) //Double checks if data was valid or not.
             {
-                int recordsCreated = CreateTicket(
+                CreateTicket(
                     model.UserId,
                     model.CreatedBy,
                     model.DateCreated = DateTime.Now,
