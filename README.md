@@ -3,7 +3,7 @@
 Bug Bag Manager is a tracking system that keeps track of bugs, errors, glitches, and work logs of a software development team. This project is meant for small teams who are working together and keeping track of things that need to be done.
 
 
-# Before using BBM update connectionString. 
+# Before using BBM, update connectionString. 
 If you're trying to clone or download BBM to your machine, you must change your connectionString to your localdb in-order to use the database that is integrated inside of BBM. You need to do the following in order to use in your localhost. 
  1. Open the project in Visual Studios by clicking **Bug Bag Manager.sln**
  2. Open up your **SQL Server Object Explorer** window. (Note: You can find this window by going to the top of window: View > SQL Server Object Explorer). 
