@@ -1,0 +1,222 @@
+﻿@using System.Web.UI.WebControls
+@using Bug_Bag_Manager.Models
+@model IEnumerable<Bug_Bag_Manager.Models.TicketsModel>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <table id="ticketsTable" class="table">
+        <tr>
+            <th>
+                Ticket ID
+            </th>
+            <th>
+                Created By
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+
+            <th>
+                Assigned Developer
+            </th>
+            <th>
+                Priority
+            </th>
+            <th>
+                Date Created
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+
+        @{
+            int count = 0;
+            foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>
+                        <a href=@Url.Action("TicketDetails", "Home")>@count</a>
+
+                        @*@Html.ActionLink("#" + @Html.DisplayFor(modelItem => item.Id), "TicketDetails", "Home")*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedBy) <br /> <h6>ID:@Html.DisplayFor(modelItem => item.UserId)</h6>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AssignedTo)
+                    </td>
+                    <td>
+                        @{
+                            if ((String)item.Priority == "HIGH" || (String)item.Priority == "High" || (String)item.Priority == "high")
+                            {
+                                //show High style="background-color:Tomato"
+                                <h5 style="background-color:red; text-align:center; color:white">High</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                            else if ((String)item.Priority == "MEDIUM" || (String)item.Priority == "Medium" || (String)item.Priority == "medium")
+                            {
+                                //show Medium style="background-color:Orange"
+                                <h5 style="background-color:orange; text-align:center; color:white">Medium</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                            else if ((String)item.Priority == "LOW" || (String)item.Priority == "Low" || (String)item.Priority == "low")
+                            {
+                                //show Low style="background-color: DodgerBlue"
+                                <h5 style="background-color:dodgerblue; text-align:center; color:white">Low</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                            else // if none
+                            {   //show style="background-color:Tomato"
+                                <h5 style="background-color:none; text-align:center">None</h5>
+                                //@Html.DisplayFor(modelItem => item.Priority);
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </td>
+                    <td>
+                        @{
+                            if ((int?)item.TicketStatus == 1 && (int?)item.TicketStatus != null)
+                            {
+                                <span style="background-color:green; text-align:center; color:white">Resolved</span>
+                            }
+                            else if ((int?)item.TicketStatus == 0 || (int?)item.TicketStatus == null)
+                            {
+                                <span style="background-color:none; text-align:center; color:none">Unresolved</span>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <br />
+    <br />
+    <table id="ticketsTable" class="table">
+        <tr>
+            <th>
+                URL
+            </th>
+            <th>
+                Ticket Type
+            </th>
+            <th>
+                Operating System
+            </th>
+            <th>
+                Steps to Reproduce
+            </th>
+
+            <th>
+                Expected Result
+            </th>
+            <th>
+                Actual Result
+            </th>
+        </tr>
+
+        @{
+            foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>
+
+                        @{
+                            if ((String)item.Url != null)
+                            {
+                                @Html.DisplayFor(modelItem => item.Url)
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        }
+                    </td>
+                    <td>
+
+                        @{
+                            if ((String)item.Type != null)
+                            {
+                                @Html.DisplayFor(modelItem => item.Type)
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{
+                            if ((String)item.Os != null)
+                            {
+                                @Html.DisplayFor(modelItem => item.Os)
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{
+                            if ((String)item.StepsToReproduce != null)
+                            {
+                                @Html.DisplayFor(modelItem => item.StepsToReproduce)
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{
+                            if ((String)item.ExpectedResult != null)
+                            {
+                                @Html.DisplayFor(modelItem => item.ExpectedResult)
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{
+                            if ((String)item.ActualResult != null)
+                            {
+                                @Html.DisplayFor(modelItem => item.ActualResult)
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <button onclick="window.print()">Print All Tickets</button>
+</body>
+</html>

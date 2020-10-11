@@ -1,0 +1,9 @@
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\bin\Release\DataLibrary.dll
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\bin\Release\DataLibrary.pdb
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\bin\Release\Dapper.dll
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\bin\Release\Dapper.xml
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Release\DataLibrary.csprojAssemblyReference.cache
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Release\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Release\DataLibrary.csproj.CopyComplete
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Release\DataLibrary.dll
+C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Release\DataLibrary.pdb

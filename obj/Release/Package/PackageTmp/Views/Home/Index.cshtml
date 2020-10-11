@@ -1,0 +1,132 @@
+﻿@using System.Web.UI.WebControls
+@using Bug_Bag_Manager.Models
+@model IEnumerable<Bug_Bag_Manager.Models.TicketsModel>
+
+@{
+    <title>@ViewBag.Title</title>
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            @{
+                int pLow = ViewBag.NumOfPriorityLow;
+                int pMedium = ViewBag.NumOfPriorityMedium;
+                int pHigh = ViewBag.NumOfPriorityHigh;
+                int pNone = ViewBag.NumOfPriorityNone;
+            }
+            var data = google.visualization.arrayToDataTable([
+                ['Ticket Priority', 'Number of Different Priorities'],
+                ['None: @pNone tickets', @pNone],
+                ['Low: @pLow tickets', @pLow],
+                ['Medium: @pMedium tickets', @pMedium],
+                ['High: @pHigh tickets', @pHigh]
+            ]);
+
+            var options = {
+                is3D: true,
+                slices: {
+                    0: { color: 'grey' },
+                    1: { color: 'green' },
+                    2: { color: 'orange' },
+                    3: { color: 'red' }
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Dashboard</h2>
+    @{
+        if (DateTime.Now.Hour < 12 && DateTime.Now.ToString("tt") == "AM") // Its the morning...
+        {
+            <p>Good Morning! It's currently @DateTime.Now. Use the dashboard to help you stay on top of tickets. Have a great morning! </p>
+        }
+        else if (DateTime.Now.Hour >= 12 && DateTime.Now.Hour <= 5 && DateTime.Now.ToString("tt") == "PM") // Its the morning...
+        {
+            <p>Good Afternoon! It's currently @DateTime.Now. Use the dashboard to help you stay on top of tickets. Have a great afternoon! </p>
+        }
+        else
+        {
+            <p>Good Evening! It's @DateTime.Now. Use the dashboard to help you stay on top of tickets. Have a great evening! </p>
+        }
+    }
+    <hr />
+    <div class="container">
+        <div class="row">
+            @*Tickets Total*@
+            <div class="col-md-3">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">
+                        <h3>Ticket Total</h3>
+                    </div>
+                    <div id="num-unresolved-tickets" class="panel-body">
+                        <h1 class="text-center">
+                            @{
+                                @ViewBag.NumOfTickets
+                            }
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            @*Unresolved Tickets Below*@
+            <div class="col-md-3">
+                <div class="panel panel-default alert-danger">
+                    <div class="panel-heading">
+                        <h3>Unresolved Tickets</h3>
+                    </div>
+                    <div id="num-unresolved-tickets" class="panel-body">
+                        <h1 class="text-center">
+                            @{
+                                @ViewBag.NumOfUnresolvedTickets
+                            }
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            @*Resolved Tickets Below*@
+            <div class="col-md-3">
+                <div class="panel panel-default alert-success">
+                    <div class="panel-heading">
+                        <h3>Resolved Tickets</h3>
+                    </div>
+                    <div id="num-resolved-tickets" class="panel-body">
+                        <h1 class="text-center">
+                            @{
+                                @ViewBag.NumOfResolvedTickets
+                            }
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            @*Pie Chart Data*@
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Priority Pie Visualizer</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="piechart_3d" style="width: 775px; height: 500px; float:right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

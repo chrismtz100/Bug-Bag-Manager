@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BugBagDB-Web.config Connection String" description="BugBagDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BugBagDB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Christian\\Desktop\\GitHub\\Public\\Bug\ Bag\ Manager\\obj\\Release\\Package\\PackageTmp\\Views\\Web\.config$" match="/configuration/connectionStrings/add[@name='BugBagDB']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Christian\\Desktop\\GitHub\\Public\\Bug\ Bag\ Manager\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BugBagDB']/@connectionString" />
+  </parameter>
+</parameters>
