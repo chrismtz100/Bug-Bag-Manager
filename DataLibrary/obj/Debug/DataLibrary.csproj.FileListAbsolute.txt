@@ -16,3 +16,12 @@ C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Debug\D
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.dll
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\DataLibrary\obj\Debug\DataLibrary.pdb
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\bin\Debug\DataLibrary.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\bin\Debug\DataLibrary.pdb
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\bin\Debug\Dapper.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\bin\Debug\Dapper.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\obj\Debug\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\obj\Debug\DataLibrary.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\DataLibrary\obj\Debug\DataLibrary.pdb

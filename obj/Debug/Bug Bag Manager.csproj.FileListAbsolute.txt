@@ -198,3 +198,41 @@ C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\obj\Debug\Bug Bag Manag
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\obj\Debug\Bug Bag Manager.csproj.CopyComplete
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\obj\Debug\Bug Bag Manager.dll
 C:\Users\Christian\Desktop\GitHub\Public\Bug Bag Manager\obj\Debug\Bug Bag Manager.pdb
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Bug Bag Manager.dll.config
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Bug Bag Manager.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Bug Bag Manager.pdb
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Antlr3.Runtime.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\DataLibrary.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\EntityFramework.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\EntityFramework.SqlServer.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Newtonsoft.Json.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Helpers.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Mvc.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Optimization.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Razor.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.WebPages.Deployment.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.WebPages.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.WebPages.Razor.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\WebGrease.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Dapper.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\DataLibrary.pdb
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\EntityFramework.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\EntityFramework.SqlServer.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Newtonsoft.Json.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Helpers.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Mvc.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Optimization.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.Razor.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.WebPages.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.WebPages.Deployment.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\System.Web.WebPages.Razor.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Antlr3.Runtime.pdb
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\bin\Dapper.xml
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\obj\Debug\Bug Bag Manager.csprojAssemblyReference.cache
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\obj\Debug\Bug Bag Manager.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\obj\Debug\Bug Bag Manager.csproj.CopyComplete
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\obj\Debug\Bug Bag Manager.dll
+C:\Users\chris\Documents\GitHub\Bug-Bag-Manager\obj\Debug\Bug Bag Manager.pdb
